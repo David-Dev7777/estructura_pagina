@@ -1,0 +1,70 @@
+﻿
+@{
+    ViewData["Title"] = "vista_contacto";
+}
+
+<h1>vista_despacho</h1>
+<nav class="navbar navbar-light bg-light">
+    <div class="container-fluid"> 
+        <div class="d-flex w-100"> <div class="btn-group me-auto" role="group">
+            <button type="button" class="btn btn-primary" onclick="filterTable('all')">Todos</button>
+            <button type="button" class="btn btn-success" onclick="filterTable('activo')">Activos</button>
+            <button type="button" class="btn btn-danger" onclick="filterTable('inactivo')">Inactivos</button>
+        </div> 
+        <div class="ms-auto d-flex">
+           
+                <form class="d-flex"> <input class="form-control me-2" type="search" placeholder="ingrese id despacho" aria-label="Search">
+                    <button class="btn btn-outline-success" type="submit">buscar</button>
+                </form>
+         </div> 
+    </div>
+</div>
+</nav>
+<div class="container my-5"> 
+    <h2 class="text-center">Detalles de Despacho</h2>
+    <div class="table-responsive"> <table class="table table-striped"> 
+        <thead> <tr> <th scope="col">#</th> 
+            <th scope="col">ID_DESPACHO</th>
+            <th scope="col">ID_PEDIDO</th>
+            <th scope="col">NOMBRE_CLIENTE</th>
+            <th scope="col">RUT_CLIENTE</th>
+            <th scope="col">TELEFONO_CLIENTE</th>
+            <th scope="col">REGION</th>
+            <th scope="col">DIRECCION_DESPACHO</th>
+            <th scope="col">CANTIDAD_BULTOS</th>
+            <th scope="col">TRANSPORTE</th>
+        </tr> 
+        </thead>
+        <tbody>
+            <tr>
+                 <td><input type="checkbox"></td>
+                <th scope="row">1</th>
+                <td>001</td>
+                <td>1001</td>
+                <td>Juan Pérez</td>
+                <td>12345678-9</td>
+                <td>+56 9 8765 4321</td>
+                <td>Región Metropolitana</td>
+                <td>Av. Siempre Viva 123</td>
+                <td>5</td>
+                <td>Transportes XYZ</td>
+                    <td><span class="badge bg-success">Entregado</span></td>
+            </tr>
+            <tr>
+                   <td><input type="checkbox"></td>
+                <th scope="row">2</th>
+                <td>002</td> 
+                <td>1002</td>
+                <td>Maria González</td> 
+                <td>87654321-0</td>
+                <td>+56 9 1234 5678</td> 
+                <td>Valparaíso</td>
+                <td>Calle Falsa 456</td>
+                <td>3</td>
+                <td>Transportes ABC</td>
+                    <td><span class="badge bg-danger">Pendiente</span>
+            </tr> 
+            </tbody>
+            </table> 
+            </div>
+    <button type="button" class="btn btn-success me-2"> <i class="bi bi-truck"></i> despachar </button>
